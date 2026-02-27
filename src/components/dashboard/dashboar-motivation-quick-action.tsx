@@ -27,8 +27,9 @@ export function DashboardMotivationQuickAction({
               May Allah accept your efforts 🤲
             </p>
             <div className="bg-card/50 rounded-lg p-4 italic border border-accent/20">
-              {message ??
-                "Remember, every small effort counts. Keep striving and stay consistent!"}
+              {message
+                ? message
+                : "Remember, every small effort counts. Keep striving and stay consistent!"}
             </div>
           </div>
         </div>

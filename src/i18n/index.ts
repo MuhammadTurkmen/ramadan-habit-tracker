@@ -18,7 +18,7 @@ if (!i18n.isInitialized) {
       },
       detection: {
         order: ["localStorage", "cookie", "navigator"],
-        caches: ["localStorage"],
+        caches: ["localStorage", "cookie"],
       },
     });
 }

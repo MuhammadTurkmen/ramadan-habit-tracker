@@ -14,13 +14,34 @@ const LanguageContext = createContext({
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguageState] = useState<Language>(
+    (i18n.language as Language) || "en",
+  );
 
   const isRTL = rtlLanguages.includes(language);
 
-  useEffect(() => {
-    i18n.changeLanguage(language);
+  const setLanguage = (lang: Language) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
+    document.cookie = `language=${lang}; path=/; max-age=31536000`;
+    setLanguageState(lang);
+  };
 
+  useEffect(() => {
+    const storedLang =
+      localStorage.getItem("language") ||
+      document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("language="))
+        ?.split("=")[1];
+
+    if (storedLang && storedLang !== language) {
+      i18n.changeLanguage(storedLang);
+      setLanguageState(storedLang as Language);
+    }
+  }, []);
+
+  useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = isRTL ? "rtl" : "ltr";
   }, [language, isRTL]);
