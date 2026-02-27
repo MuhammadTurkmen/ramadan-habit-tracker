@@ -2,7 +2,7 @@
 import { CheckCircle, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ScrollArea, ScrollBar } from "../ui/scroll-area";
+import { useTranslation } from "react-i18next";
 
 export function DashboardMiniCalendar({
   calendarDays,
@@ -16,11 +16,14 @@ export function DashboardMiniCalendar({
   todayRamadanDay: number | null;
 }) {
   const currentDay = todayRamadanDay;
+  const { t } = useTranslation();
 
   if (calendarDays.length === 0) {
     return (
       <div className="bg-card rounded-2xl p-6 border border-border">
-        <p className="text-muted-foreground text-center">No activity yet 🌙</p>
+        <p className="text-muted-foreground text-center">
+          {t("dashboard.noActivity")}
+        </p>
       </div>
     );
   }
@@ -34,10 +37,10 @@ export function DashboardMiniCalendar({
         className="bg-card rounded-2xl p-6 border border-border shadow-lg"
       >
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl">Quick Overview</h3>
+          <h3 className="text-xl">{t("dashboard.quickOverview")}</h3>
           <Link href="/dashboard/calendar">
             <button className="text-primary hover:text-primary/80 flex items-center gap-1 transition-colors">
-              View All
+              {t("dashboard.viewAll")}
               <ChevronRight className="w-4 h-4" />
             </button>
           </Link>
@@ -56,7 +59,7 @@ export function DashboardMiniCalendar({
                         : "border-border hover:border-border-foreground/50"
                   }`}
                 >
-                  <div className="text-xs mb-1">Day</div>
+                  <div className="text-xs mb-1">{t("dashboard.dayLabel")}</div>
                   <div className="text-xl">{day.day}</div>
                   {day.completed && day.day !== currentDay && (
                     <CheckCircle className="w-4 h-4 text-primary mt-1" />

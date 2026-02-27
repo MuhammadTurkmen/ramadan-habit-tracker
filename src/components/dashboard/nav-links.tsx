@@ -4,9 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { dashboardNav } from "@/lib/nav";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 export default function NavLinks({ onClick }: { onClick?: () => void }) {
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   return (
     <nav className="flex-1 space-y-2">
@@ -25,7 +27,7 @@ export default function NavLinks({ onClick }: { onClick?: () => void }) {
             }`}
           >
             <item.icon className="w-5 h-5" />
-            {item.title}
+            {t(item.title)}
           </Link>
         );
       })}

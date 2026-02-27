@@ -1,17 +1,20 @@
+"use client";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function VerifyEmailPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       <div className="max-w-md text-center space-y-4">
-        <h1 className="text-2xl font-semibold">Verify your email</h1>
+        <h1 className="text-2xl font-semibold">{t("auth.verify_title")}</h1>
         <p className="text-muted-foreground">
-          We’ve sent you a verification email.
+          {t("auth.verify_instructions")}
           <br />
-          Please check your inbox and your <b>spam folder</b>. after
-          verification{" "}
+          <b>{t("auth.verify_check_spam", "spam folder")}</b>.{" "}
           <Link href="/login" className="underline">
-            click here to login
+            {t("auth.verify_login_link")}
           </Link>
         </p>
       </div>

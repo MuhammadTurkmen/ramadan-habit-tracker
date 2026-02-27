@@ -8,27 +8,27 @@ import {
 
 export const dashboardNav = [
   {
-    title: "Dashboard",
+    title: "dashboard.nav.dashboard",
     href: "/dashboard",
     icon: LayoutDashboard,
   },
   {
-    title: "Daily Tracker",
+    title: "dashboard.nav.dailyTracker",
     href: "/dashboard/daily-tracker",
     icon: CheckSquare,
   },
   {
-    title: "Calendar",
+    title: "dashboard.nav.calendar",
     href: "/dashboard/calendar",
     icon: Calendar,
   },
   {
-    title: "Insights",
+    title: "dashboard.nav.insights",
     href: "/dashboard/insights",
     icon: BarChart3,
   },
   {
-    title: "Settings",
+    title: "dashboard.nav.settings",
     href: "/dashboard/settings",
     icon: Settings,
   },

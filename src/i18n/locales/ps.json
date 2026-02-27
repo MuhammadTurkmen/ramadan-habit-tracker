@@ -1,0 +1,132 @@
+{
+  "landing": {
+    "siteTitle": "د روژې عادت تعقیبونکی",
+    "title": "د روژې عادت تعقیبونکی",
+    "subtitle": "په دې مبارک میاشت کې معنی لرونکي عادتونه جوړ کړئ. خپل لمونځونه، روژه، د قرآن لوستل او نور تعقیب کړئ.",
+    "getStarted": "پیل کړئ",
+    "signIn": "ننوتل",
+    "featuresTitle": "ستاسو د برکت روژې لپاره هر څه ته اړتیا لرئ",
+    "features": {
+      "dailyTracker": {
+        "title": "ورځنی تعقیب",
+        "desc": "په آسانۍ سره خپل روژه، لمونځ، د قرآن لوستل او ذکرونه تعقیب کړئ."
+      },
+      "visualCalendar": {
+        "title": "د لید تقویم",
+        "desc": "د ښکلي تقویم لید سره خپل پرمختګ په یوه نظر کې وګورئ."
+      },
+      "insights": {
+        "title": "بصیرتونه او احصایې",
+        "desc": "خپل عادتونه د مفصل تحلیل او سلسلو سره وپیژنئ."
+      },
+      "stayMotivated": {
+        "title": "انګېزه وساتئ",
+        "desc": "د ورځني هڅونې ترلاسه کول او خپل روحاني سفر تعقیبول."
+      },
+      "darkMode": {
+        "title": "توره موضوع",
+        "desc": "د شپو لمونځونو پر مهال د سترګو لپاره اسانه، د تورو حالت ملاتړ."
+      },
+      "buildStreaks": {
+        "title": "د تسلسل جوړول",
+        "desc": "ثبات وساتئ او د روژې وروسته پایدار عادتونه جوړ کړئ."
+      }
+    },
+    "ctaTitle": "نن ورځ خپله سفر پیل کړئ",
+    "ctaSubtitle": "د هغو زرګونو مسلمانانو سره یوځای شئ چې خپل عادتونه تعقیبوي او د دې مبارک میاشت څخه پوره ګټه اخلي.",
+    "signUpNow": "اوس ګډون وکړئ",
+    "login": "ننوتل",
+    "downloadApp": "موبایل اپلیکیشن ډاونلوډ کړئ",
+    "download": "ژر به راشي...",
+    "footerPrefix": "© 2026 Ramadan Tracker. جوړ کړی"
+  },
+  "auth": {
+    "welcome": "بېرته ښه راغلاست",
+    "email": "برېښلیک",
+    "password": "پټنوم",
+    "login": "ننوتل",
+    "logging_in": "ننوتل...",
+    "create_account": "حساب جوړ کړئ",
+    "sign_up": "ګډون",
+    "creating_account": "د حساب جوړول...",
+    "name": "نوم",
+    "back_to_home": "کور ته بیرته لاړ شئ",
+    "no_account": "حساب نلرئ؟",
+    "or_continue_with": "یا د دې سره ادامه ورکړئ",
+    "already_have_account": "آیا دمخه حساب لرئ؟",
+    "verify_title": "خپل بریښنالیک تایید کړئ",
+    "verify_instructions": "موږ تاسو ته د تایید ایمیل لیږلی دی. مهرباني وکړئ خپل انباکس او سپام فولډر وګورئ.",
+    "verify_check_spam": "سپام فولډر",
+    "verify_login_link": "د ننوتلو لپاره دلته کلیک وکړئ",
+    "loginSuccess": "په بریالیتوب سره ننوتل! 🤍",
+    "signupSuccess": "حساب په بریالیتوب سره جوړ شو! 🤍"
+  },
+  "dailyTracker": {
+    "dayOfRamadan": "د رمضان {{day}} ورځ",
+    "statusLabel": "حالت:",
+    "status": {
+      "excellent": "عالي",
+      "good": "ښه",
+      "keepGoing": "مخکې لاړ شئ"
+    },
+    "fasting": "روژه",
+    "fastingQuestion": "آیا تاسو نن روژه نیولې؟",
+    "prayerChecklist": "د لمونځ لړۍ",
+    "quranReading": "د قرآن مطالعه",
+    "pagesRead": "صفحات لوستل شوي",
+    "dhikr": "ذکر",
+    "dhikrDesc": "سهار/ماښام یادونه",
+    "personalNotes": "شخصي یادداشتونه",
+    "notesPlaceholder": "د نن لپاره خپل فکرونه، انعکاسونه یا اهداف ولیکئ...",
+    "saving": "ساتل کېږي...",
+    "saveProgress": "پرمختګ خوندي کړئ",
+    "progressSaved": "پرمختګ په بریالیتوب سره خوندي شو 🤍",
+    "saveError": "پرمختګ خوندي نشو. مهرباني وکړئ وروسته بیا هڅه وکړئ. 😔",
+    "prayers": {
+      "fajr": "فجر",
+      "dhuhr": "ظهر",
+      "asr": "عصر",
+      "maghrib": "مغرب",
+      "isha": "عشاء"
+    }
+  },
+  "dashboard": {
+    "greeting": "السلام علیکم! 👋",
+    "subtitle": "ستاسو روحاني سفر لنډیز",
+    "mubarak": "رمضان مبارک! 🌙",
+    "today_is": "نن ده",
+    "not_started": "پیل شوی نه دی",
+    "ramadan_not_started": "رامضان پیل شوی نه دی",
+    "ramadan_day_of": "د رمضان {{day}} ورځ",
+    "statusLabel": "حالت:",
+    "status": {
+      "excellent": "عالي",
+      "good": "ښه",
+      "needsImprovement": "د پرمختګ اړتیا"
+    },
+    "complete": "بشپړ",
+    "stats": {
+      "currentStreak": "اوسنی سلسله",
+      "days": "ورځې",
+      "keepItGoing": "مخکې لاړ شئ!",
+      "completedDays": "پوره شوې ورځې",
+      "progress": "پرمختګ",
+      "prayerConsistency": "د لمونځ ثابتوالی",
+      "mashallah": "ماشاءالله!"
+    },
+    "noActivity": "تر اوسه کوم فعالیت نشته 🌙",
+    "quickOverview": "خلاصه کتنه",
+    "viewAll": "ټول وګورئ",
+    "dayLabel": "ورځ",
+    "settings": "تنظیمات",
+    "logout": "وتل",
+    "logging_out": "وتل روان دي...",
+    "nav": {
+      "dashboard": "کنټرول پینل",
+      "dailyTracker": "ورځنی تعقیب",
+      "calendar": "تقویم",
+      "insights": "بصیرتونه",
+      "settings": "تنظیمات"
+    }
+  }
+}

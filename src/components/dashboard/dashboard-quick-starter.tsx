@@ -1,6 +1,7 @@
 "use client";
 import { CheckCircle, Flame, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export function DashboardQuickStarter({
   completedDays,
@@ -11,6 +12,7 @@ export function DashboardQuickStarter({
   currentStreak: number;
   prayerConsistency: number;
 }) {
+  const { t } = useTranslation();
   const totalDays = 30;
   return (
     <motion.div
@@ -21,23 +23,23 @@ export function DashboardQuickStarter({
     >
       <StatCard
         icon={<Flame className="w-8 h-8 text-accent" />}
-        title="Current Streak"
-        value={`${currentStreak} days`}
-        description="Keep it going!"
+        title={t("dashboard.stats.currentStreak")}
+        value={`${currentStreak} ${t("dashboard.stats.days")}`}
+        description={t("dashboard.stats.keepItGoing")}
         color="bg-accent/10"
       />
       <StatCard
         icon={<CheckCircle className="w-8 h-8 text-primary" />}
-        title="Completed Days"
+        title={t("dashboard.stats.completedDays")}
         value={`${completedDays}/${totalDays}`}
-        description={`${Math.round((completedDays / totalDays) * 100)}% progress`}
+        description={`${Math.round((completedDays / totalDays) * 100)}% ${t("dashboard.stats.progress")}`}
         color="bg-primary/10"
       />
       <StatCard
         icon={<Sparkles className="w-8 h-8 text-chart-3" />}
-        title="Prayer Consistency"
+        title={t("dashboard.stats.prayerConsistency")}
         value={`${prayerConsistency}%`}
-        description="Mashallah!"
+        description={t("dashboard.stats.mashallah")}
         color="bg-chart-3/10"
       />
     </motion.div>

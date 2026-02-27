@@ -1,0 +1,132 @@
+{
+  "landing": {
+    "siteTitle": "Ramadan Habit Tracker",
+    "title": "Ramadan Habit Tracker",
+    "subtitle": "Build meaningful habits this blessed month. Track your prayers, fasting, Quran reading, and more.",
+    "getStarted": "Get Started",
+    "signIn": "Sign In",
+    "featuresTitle": "Everything You Need for a Blessed Ramadan",
+    "features": {
+      "dailyTracker": {
+        "title": "Daily Tracker",
+        "desc": "Track your fasting, prayers, Quran reading, and dhikr with ease."
+      },
+      "visualCalendar": {
+        "title": "Visual Calendar",
+        "desc": "See your progress at a glance with a beautiful calendar view."
+      },
+      "insights": {
+        "title": "Insights & Stats",
+        "desc": "Understand your habits with detailed analytics and streaks."
+      },
+      "stayMotivated": {
+        "title": "Stay Motivated",
+        "desc": "Get daily encouragement and track your spiritual journey."
+      },
+      "darkMode": {
+        "title": "Dark Mode",
+        "desc": "Easy on the eyes during night prayers with dark mode support."
+      },
+      "buildStreaks": {
+        "title": "Build Streaks",
+        "desc": "Maintain consistency and build lasting habits beyond Ramadan."
+      }
+    },
+    "ctaTitle": "Start Your Journey Today",
+    "ctaSubtitle": "Join thousands of Muslims tracking their habits and making the most of this blessed month.",
+    "signUpNow": "Sign Up Now",
+    "login": "Login",
+    "downloadApp": "Download Mobile App",
+    "download": "Coming soon...",
+    "footerPrefix": "© 2026 Ramadan Tracker. Built by"
+  },
+  "auth": {
+    "welcome": "Welcome Back",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "logging_in": "Logging in...",
+    "create_account": "Create Account",
+    "sign_up": "Sign Up",
+    "creating_account": "Creating Account...",
+    "name": "Name",
+    "back_to_home": "Back to Home",
+    "no_account": "Don't have an account?",
+    "or_continue_with": "Or continue with",
+    "already_have_account": "Already have an account?",
+    "verify_title": "Verify your email",
+    "verify_instructions": "We've sent you a verification email. Please check your inbox and your",
+    "verify_check_spam": "spam folder",
+    "verify_login_link": "click here to login",
+    "loginSuccess": "Logged in successfully! 🤍",
+    "signupSuccess": "Account created successfully! 🤍"
+  },
+  "dailyTracker": {
+    "dayOfRamadan": "Day {{day}} of Ramadan",
+    "statusLabel": "Status:",
+    "status": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "keepGoing": "Keep Going"
+    },
+    "fasting": "Fasting",
+    "fastingQuestion": "Did you fast today?",
+    "prayerChecklist": "Prayer Checklist",
+    "quranReading": "Quran Reading",
+    "pagesRead": "pages read",
+    "dhikr": "Dhikr",
+    "dhikrDesc": "Morning/Evening remembrance",
+    "personalNotes": "Personal Notes",
+    "notesPlaceholder": "Write your thoughts, reflections, or goals for today...",
+    "saving": "Saving...",
+    "saveProgress": "Save Progress",
+    "progressSaved": "Progress saved successfully 🤍",
+    "saveError": "Failed to save progress. Please try again later. 😔",
+    "prayers": {
+      "fajr": "Fajr",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    }
+  },
+  "dashboard": {
+    "greeting": "Assalamu Alaikum! 👋",
+    "subtitle": "Here's your spiritual journey overview",
+    "mubarak": "Ramadan Mubarak! 🌙",
+    "today_is": "Today is",
+    "not_started": "Not Started",
+    "ramadan_not_started": "Ramadan has not started",
+    "ramadan_day_of": "Day {{day}} of Ramadan",
+    "statusLabel": "Status:",
+    "status": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "needsImprovement": "Needs Improvement"
+    },
+    "complete": "Complete",
+    "stats": {
+      "currentStreak": "Current Streak",
+      "days": "days",
+      "keepItGoing": "Keep it going!",
+      "completedDays": "Completed Days",
+      "progress": "progress",
+      "prayerConsistency": "Prayer Consistency",
+      "mashallah": "Mashallah!"
+    },
+    "noActivity": "No activity yet 🌙",
+    "quickOverview": "Quick Overview",
+    "viewAll": "View All",
+    "dayLabel": "Day",
+    "settings": "Settings",
+    "logout": "Logout",
+    "logging_out": "Logging out...",
+    "nav": {
+      "dashboard": "Dashboard",
+      "dailyTracker": "Daily Tracker",
+      "calendar": "Calendar",
+      "insights": "Insights",
+      "settings": "Settings"
+    }
+  }
+}

@@ -7,8 +7,10 @@ import Link from "next/link";
 import { ArrowLeft, Lock, Mail, Moon, User } from "lucide-react";
 import { motion } from "framer-motion";
 import { signupAction } from "@/app/actions/authentication";
+import { useTranslation } from "react-i18next";
 
 export default function SignUpForm() {
+  const { t } = useTranslation();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<{
@@ -53,19 +55,23 @@ export default function SignUpForm() {
         <Link href={"/"}>
           <button className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            {t("auth.back_to_home", "Back to Home")}
           </button>
         </Link>
 
         <div className="bg-card rounded-2xl shadow-2xl p-8 border border-border">
           <div className="flex items-center justify-center gap-2 mb-8">
             <Moon className="w-10 h-10 text-primary" />
-            <h1 className="text-3xl text-primary">Create Account</h1>
+            <h1 className="text-3xl text-primary">
+              {t("auth.create_account")}
+            </h1>
           </div>
 
           <form onSubmit={handleSignup} className="space-y-6">
             <div>
-              <label className="block mb-2 text-card-foreground">Name</label>
+              <label className="block mb-2 text-card-foreground">
+                {t("auth.name")}
+              </label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <input
@@ -79,7 +85,9 @@ export default function SignUpForm() {
             </div>
 
             <div>
-              <label className="block mb-2 text-card-foreground">Email</label>
+              <label className="block mb-2 text-card-foreground">
+                {t("auth.email")}
+              </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <input
@@ -94,7 +102,7 @@ export default function SignUpForm() {
 
             <div>
               <label className="block mb-2 text-card-foreground">
-                Password
+                {t("auth.password")}
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -117,7 +125,7 @@ export default function SignUpForm() {
               className="w-full py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl"
               disabled={loading}
             >
-              {loading ? "Creating Account..." : "Sign Up"}
+              {loading ? t("auth.creating_account") : t("auth.sign_up")}
             </button>
 
             <div className="relative">
@@ -159,9 +167,11 @@ export default function SignUpForm() {
           </form>
 
           <p className="mt-6 text-center text-muted-foreground">
-            Already have an account?{" "}
+            {t("auth.already_have_account", "Already have an account?")}{" "}
             <Link href={"/login"}>
-              <button className="text-primary hover:underline">Login</button>
+              <button className="text-primary hover:underline">
+                {t("auth.login")}
+              </button>
             </Link>
           </p>
         </div>

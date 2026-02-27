@@ -1,0 +1,132 @@
+{
+  "landing": {
+    "siteTitle": "Ramazan Alışkanlık Takibi",
+    "title": "Ramazan Alışkanlık Takibi",
+    "subtitle": "Bu mukaddes ayda anlamlı alışkanlıklar oluşturun. Namazlarınızı, orucunuzu, Kur'an okumalarınızı ve daha fazlasını takip edin.",
+    "getStarted": "Başlayın",
+    "signIn": "Giriş Yap",
+    "featuresTitle": "Kutsal Bir Ramazan için İhtiyacınız Olan Her Şey",
+    "features": {
+      "dailyTracker": {
+        "title": "Günlük Takip",
+        "desc": "Oruç, namaz, Kur'an okuma ve zikirlerinizi kolayca takip edin."
+      },
+      "visualCalendar": {
+        "title": "Görsel Takvim",
+        "desc": "İlerlemenizi güzel bir takvim görünümüyle hızlıca görün."
+      },
+      "insights": {
+        "title": "İçgörüler ve İstatistikler",
+        "desc": "Detaylı analizler ve serilerle alışkanlıklarınızı anlayın."
+      },
+      "stayMotivated": {
+        "title": "Motivasyonunuzu Koruyun",
+        "desc": "Günlük teşvikler alın ve manevi yolculuğunuzu takip edin."
+      },
+      "darkMode": {
+        "title": "Karanlık Mod",
+        "desc": "Gece ibadetlerinde gözlerinize kolaylık sağlayan karanlık mod."
+      },
+      "buildStreaks": {
+        "title": "Süreklilik Oluşturun",
+        "desc": "Tutarlılığı sürdürün ve Ramazan sonrası kalıcı alışkanlıklar oluşturun."
+      }
+    },
+    "ctaTitle": "Yolculuğunuza Bugün Başlayın",
+    "ctaSubtitle": "Alışkanlıklarını takip eden binlerce Müslümanla katılın ve bu mukaddes ayı en iyi şekilde değerlendirin.",
+    "signUpNow": "Hemen Kaydol",
+    "login": "Giriş",
+    "downloadApp": "Mobil Uygulamayı İndir",
+    "download": "Yakında...",
+    "footerPrefix": "© 2026 Ramadan Tracker. Oluşturan"
+  },
+  "auth": {
+    "welcome": "Tekrar Hoşgeldiniz",
+    "email": "E-posta",
+    "password": "Parola",
+    "login": "Giriş",
+    "logging_in": "Giriş yapılıyor...",
+    "create_account": "Hesap Oluştur",
+    "sign_up": "Kayıt Ol",
+    "creating_account": "Hesap oluşturuluyor...",
+    "name": "İsim",
+    "back_to_home": "Anasayfaya dön",
+    "no_account": "Hesabınız yok mu?",
+    "or_continue_with": "Veya devam et",
+    "already_have_account": "Zaten hesabınız var mı?",
+    "verify_title": "E-postanızı doğrulayın",
+    "verify_instructions": "Size bir doğrulama e-postası gönderdik. Lütfen gelen kutunuzu ve spam klasörünüzü kontrol edin.",
+    "verify_check_spam": "spam klasörü",
+    "verify_login_link": "giriş yapmak için buraya tıklayın",
+    "loginSuccess": "Başarıyla giriş yapıldı! 🤍",
+    "signupSuccess": "Hesap başarıyla oluşturuldu! 🤍"
+  },
+  "dailyTracker": {
+    "dayOfRamadan": "Ramazan {day}. günü",
+    "statusLabel": "Durum:",
+    "status": {
+      "excellent": "Mükemmel",
+      "good": "İyi",
+      "keepGoing": "Devam Et"
+    },
+    "fasting": "Oruç",
+    "fastingQuestion": "Bugün oruç tuttunuz mu?",
+    "prayerChecklist": "Namaz Kontrol Listesi",
+    "quranReading": "Kur'an Okuma",
+    "pagesRead": "okunan sayfalar",
+    "dhikr": "Zikir",
+    "dhikrDesc": "Sabah/Akşam zikirleri",
+    "personalNotes": "Kişisel Notlar",
+    "notesPlaceholder": "Bugün için düşüncelerinizi, yansımalarınızı veya hedeflerinizi yazın...",
+    "saving": "Kaydediliyor...",
+    "saveProgress": "İlerlemeni Kaydet",
+    "progressSaved": "İlerleme başarıyla kaydedildi 🤍",
+    "saveError": "İlerleme kaydedilemedi. Lütfen daha sonra tekrar deneyin. 😔",
+    "prayers": {
+      "fajr": "Fajr",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    }
+  },
+  "dashboard": {
+    "greeting": "Assalamu Alaikum! 👋",
+    "subtitle": "İbadet yolculuğunuzun genel görünümü",
+    "mubarak": "Ramazan Mubarak! 🌙",
+    "today_is": "Bugün",
+    "not_started": "Başlamadı",
+    "ramadan_not_started": "Ramazan başlamadı",
+    "ramadan_day_of": "Ramazan {{day}}. günü",
+    "statusLabel": "Durum:",
+    "status": {
+      "excellent": "Mükemmel",
+      "good": "İyi",
+      "needsImprovement": "Geliştirilmesi Gerekir"
+    },
+    "complete": "Tamamlandı",
+    "stats": {
+      "currentStreak": "Mevcut Seri",
+      "days": "gün",
+      "keepItGoing": "Devam Et!",
+      "completedDays": "Tamamlanan Günler",
+      "progress": "ilerleme",
+      "prayerConsistency": "Namaz Tutarlılığı",
+      "mashallah": "Maşallah!"
+    },
+    "noActivity": "Henüz etkinlik yok 🌙",
+    "quickOverview": "Hızlı Bakış",
+    "viewAll": "Hepsini Gör",
+    "dayLabel": "Gün",
+    "settings": "Ayarlar",
+    "logout": "Çıkış Yap",
+    "logging_out": "Çıkış yapılıyor...",
+    "nav": {
+      "dashboard": "Kontrol Paneli",
+      "dailyTracker": "Günlük Takip",
+      "calendar": "Takvim",
+      "insights": "İçgörüler",
+      "settings": "Ayarlar"
+    }
+  }
+}

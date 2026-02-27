@@ -2,6 +2,7 @@
 import { AlertCircle, CheckCircle, XCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { calculateDailyCompletion } from "@/lib/tracker-utils";
+import { useTranslation } from "react-i18next";
 
 export function DashboardTodayCard({
   ramadanDay,
@@ -10,21 +11,22 @@ export function DashboardTodayCard({
   ramadanDay: number | null;
   tracker: any;
 }) {
+  const { t } = useTranslation();
   const todayStats = calculateDailyCompletion(tracker);
 
   const completionPercentage = todayStats.percentage;
 
-  let status = "Not Started";
+  let status = t("dashboard.not_started");
   let StatusIcon = AlertCircle;
 
   if (completionPercentage >= 80) {
-    status = "Excellent";
+    status = t("dashboard.status.excellent");
     StatusIcon = CheckCircle;
   } else if (completionPercentage >= 40) {
-    status = "Good";
+    status = t("dashboard.status.good");
     StatusIcon = AlertCircle;
   } else if (completionPercentage > 0) {
-    status = "Needs Improvement";
+    status = t("dashboard.status.needsImprovement");
     StatusIcon = XCircle;
   }
 
@@ -36,17 +38,19 @@ export function DashboardTodayCard({
       className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 text-white shadow-2xl"
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex-1 text-center md:text-left">
-          <p className="text-white/90 mb-2">Today is</p>
+        <div className="flex-1 text-center md:text-start">
+          <p className="text-white/90 mb-2">{t("dashboard.today_is")}</p>
           <h2 className="text-4xl md:text-5xl mb-4">
             {ramadanDay
-              ? `Day ${ramadanDay} of Ramadan`
-              : "Ramadan has not started"}
+              ? t("dashboard.ramadan_day_of", { day: ramadanDay })
+              : t("dashboard.ramadan_not_started")}
           </h2>
-          <p className="text-white/90 mb-4">Ramadan Mubarak! 🌙</p>
+          <p className="text-white/90 mb-4">{t("dashboard.mubarak")}</p>
           <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
             <StatusIcon className="w-5 h-5" />
-            <span>Status: {status}</span>
+            <span>
+              {t("dashboard.statusLabel")} {status}
+            </span>
           </div>
         </div>
 

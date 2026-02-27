@@ -9,8 +9,11 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export function LandingPageFeatures() {
+  const { t } = useTranslation();
+
   return (
     <section className="px-4 py-20 bg-card">
       <div className="max-w-6xl mx-auto">
@@ -21,51 +24,38 @@ export function LandingPageFeatures() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl text-center mb-12 text-primary">
-            Everything You Need for a Blessed Ramadan
-            {/* {t('landing.featuresTitle')} */}
+            {t("landing.featuresTitle")}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard
               icon={<CheckCircle className="w-10 h-10 text-accent" />}
-              // title={t("landing.dailyTracker")}
-              // description={t("landing.dailyTrackerDesc")}
-              title="Daily Tracker"
-              description="Track your fasting, prayers, Quran reading, and dhikr with ease."
+              title={t("landing.features.dailyTracker.title")}
+              description={t("landing.features.dailyTracker.desc")}
             />
             <FeatureCard
               icon={<Calendar className="w-10 h-10 text-accent" />}
-              // title={t("landing.visualCalendar")}
-              title="Visual Calendar"
-              description="See your progress at a glance with a beautiful calendar view."
-              // description={t("landing.visualCalendarDesc")}
+              title={t("landing.features.visualCalendar.title")}
+              description={t("landing.features.visualCalendar.desc")}
             />
             <FeatureCard
               icon={<TrendingUp className="w-10 h-10 text-accent" />}
-              // title={t("landing.insights")}
-              title="Insights & Stats"
-              description="Understand your habits with detailed analytics and streaks."
-              // description={t("landing.insightsDesc")}
+              title={t("landing.features.insights.title")}
+              description={t("landing.features.insights.desc")}
             />
             <FeatureCard
               icon={<Heart className="w-10 h-10 text-accent" />}
-              title="Stay Motivated"
-              // title={t("landing.stayMotivated")}
-              description="Get daily encouragement and track your spiritual journey."
-              // description={t("landing.stayMotivatedDesc")}
+              title={t("landing.features.stayMotivated.title")}
+              description={t("landing.features.stayMotivated.desc")}
             />
             <FeatureCard
               icon={<Moon className="w-10 h-10 text-accent" />}
-              title="Dark Mode"
-              // title={t("landing.darkMode")}
-              description="Easy on the eyes during night prayers with dark mode support."
-              // description={t("landing.darkModeDesc")}
+              title={t("landing.features.darkMode.title")}
+              description={t("landing.features.darkMode.desc")}
             />
             <FeatureCard
               icon={<Star className="w-10 h-10 text-accent" />}
-              title="Build Streaks"
-              // title={t("landing.buildStreaks")}
-              description="Maintain consistency and build lasting habits beyond Ramadan."
-              // description={t("landing.buildStreaksDesc")}
+              title={t("landing.features.buildStreaks.title")}
+              description={t("landing.features.buildStreaks.desc")}
             />
           </div>
         </motion.div>

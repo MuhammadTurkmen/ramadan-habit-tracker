@@ -5,6 +5,7 @@ import { Calendar, CheckCircle, Circle, Save } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 export default function TrackerForm({
   tracker,
@@ -13,6 +14,7 @@ export default function TrackerForm({
   tracker: any;
   ramadanDay: number | null;
 }) {
+  const { t } = useTranslation();
   const [isFasting, setIsFasting] = useState(tracker.fasted);
   const [dhikr, setDhikr] = useState(tracker.dhikr);
   const [notes, setNotes] = useState(tracker.notes ?? "");
@@ -52,9 +54,9 @@ export default function TrackerForm({
       if (error) {
         throw error;
       }
-      toast.success("Progress saved successfully 🤍");
+      toast.success(t("dailyTracker.progressSaved"));
     } catch (error) {
-      toast.error("Failed to save progress. Please try again later. 😔");
+      toast.error(t("dailyTracker.saveError"));
     } finally {
       setIsSaving(false);
     }
@@ -65,11 +67,15 @@ export default function TrackerForm({
   };
 
   const prayerList = [
-    { key: "fajr", name: "Fajr", time: "5:30 AM" },
-    { key: "dhuhr", name: "Dhuhr", time: "12:45 PM" },
-    { key: "asr", name: "Asr", time: "3:30 PM" },
-    { key: "maghrib", name: "Maghrib", time: "6:15 PM" },
-    { key: "isha", name: "Isha", time: "8:00 PM" },
+    { key: "fajr", name: t("dailyTracker.prayers.fajr"), time: "5:30 AM" },
+    { key: "dhuhr", name: t("dailyTracker.prayers.dhuhr"), time: "12:45 PM" },
+    { key: "asr", name: t("dailyTracker.prayers.asr"), time: "3:30 PM" },
+    {
+      key: "maghrib",
+      name: t("dailyTracker.prayers.maghrib"),
+      time: "6:15 PM",
+    },
+    { key: "isha", name: t("dailyTracker.prayers.isha"), time: "8:00 PM" },
   ];
 
   return (
@@ -85,16 +91,16 @@ export default function TrackerForm({
           <span className="text-white/90">{tracker.date}</span>
         </div>
         <h1 className="text-3xl md:text-4xl mb-2">
-          Day {ramadanDay ?? "-"} of Ramadan
+          {t("dailyTracker.dayOfRamadan", { day: ramadanDay ?? "-" })}
         </h1>
         <div className="inline-flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full text-sm">
           <span>
-            Status:{" "}
+            {t("dailyTracker.statusLabel")}{" "}
             {prayerPercentage >= 80
-              ? "Excellent"
+              ? t("dailyTracker.status.excellent")
               : prayerPercentage >= 60
-                ? "Good"
-                : "Keep Going"}
+                ? t("dailyTracker.status.good")
+                : t("dailyTracker.status.keepGoing")}
           </span>
         </div>
       </motion.div>
@@ -117,9 +123,9 @@ export default function TrackerForm({
               )}
             </div>
             <div>
-              <h3 className="text-lg">Fasting</h3>
+              <h3 className="text-lg">{t("dailyTracker.fasting")}</h3>
               <p className="text-sm text-muted-foreground">
-                Did you fast today?
+                {t("dailyTracker.fastingQuestion")}
               </p>
             </div>
           </div>
@@ -140,7 +146,7 @@ export default function TrackerForm({
         {/* Prayer Checklist */}
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg">Prayer Checklist</h3>
+            <h3 className="text-lg">{t("dailyTracker.prayerChecklist")}</h3>
             <span className="text-sm text-muted-foreground">
               {completedPrayers}/5 completed
             </span>
@@ -183,7 +189,7 @@ export default function TrackerForm({
 
         {/* Quran Input */}
         <div>
-          <h3 className="text-lg mb-4">Quran Reading</h3>
+          <h3 className="text-lg mb-4">{t("dailyTracker.quranReading")}</h3>
           <div className="flex items-center gap-4">
             <button
               onClick={() => setQuranPages(Math.max(0, quranPages - 1))}
@@ -193,7 +199,9 @@ export default function TrackerForm({
             </button>
             <div className="flex-1 text-center">
               <div className="text-3xl mb-1">{quranPages}</div>
-              <div className="text-sm text-muted-foreground">pages read</div>
+              <div className="text-sm text-muted-foreground">
+                {t("dailyTracker.pagesRead")}
+              </div>
             </div>
             <button
               onClick={() => setQuranPages(quranPages + 1)}
@@ -217,9 +225,9 @@ export default function TrackerForm({
               )}
             </div>
             <div>
-              <h3 className="text-lg">Dhikr</h3>
+              <h3 className="text-lg">{t("dailyTracker.dhikr")}</h3>
               <p className="text-sm text-muted-foreground">
-                Morning/Evening remembrance
+                {t("dailyTracker.dhikrDesc")}
               </p>
             </div>
           </div>
@@ -237,12 +245,12 @@ export default function TrackerForm({
 
         {/* Notes */}
         <div>
-          <h3 className="text-lg mb-4">Personal Notes</h3>
+          <h3 className="text-lg mb-4">{t("dailyTracker.personalNotes")}</h3>
           <textarea
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             className="w-full h-32 p-4 bg-input-background border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-            placeholder="Write your thoughts, reflections, or goals for today..."
+            placeholder={t("dailyTracker.notesPlaceholder")}
           />
         </div>
       </motion.div>
@@ -256,7 +264,7 @@ export default function TrackerForm({
         className={`${isSaving ? "bg-primary/50 cursor-not-allowed" : "cursor-pointer"} w-full bg-primary text-primary-foreground py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2`}
       >
         <Save className="w-5 h-5" />
-        {isSaving ? "Saving..." : "Save Progress"}
+        {isSaving ? t("dailyTracker.saving") : t("dailyTracker.saveProgress")}
       </motion.button>
     </>
   );
