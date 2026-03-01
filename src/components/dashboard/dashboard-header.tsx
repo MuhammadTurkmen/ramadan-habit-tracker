@@ -17,7 +17,7 @@ export function DashboardHeader() {
         <h1 className="text-2xl md:text-4xl mb-2">{t("dashboard.greeting")}</h1>
         <p className="text-muted-foreground">{t("dashboard.subtitle")}</p>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="hidden md:flex items-center gap-2">
         <ThemeToggle />
         <LanguageSelector />
       </div>

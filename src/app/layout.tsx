@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
 import { Toaster } from "sonner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "@/i18n";
 
 const geistSans = Geist({
@@ -40,6 +41,7 @@ export default function RootLayout({
           <LanguageProvider>{children}</LanguageProvider>
           <Toaster richColors position="top-center" />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
