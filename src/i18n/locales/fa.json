@@ -88,7 +88,8 @@
       "asr": "عصر",
       "maghrib": "مغرب",
       "isha": "عشا"
-    }
+    },
+    "noData": "داده‌ای برای امروز وجود ندارد. ردیاب امروز به زودی خواهد آمد! لطفا با حوصله مندی صبر کنید 🌙"
   },
   "dashboard": {
     "greeting": "السلام علیکم! 👋",
@@ -121,6 +122,12 @@
     "settings": "تنظیمات",
     "logout": "خروج",
     "logging_out": "در حال خروج...",
+    "motivation": {
+      "title": "انگیزه روزانه",
+      "subtitle": "باشد که الله تلاش‌های شما را بپذیرد 🤲",
+      "quickAction": "عادت‌های امروز را ثبت کن",
+      "defaultMessage": "به خاطر داشته باش، هر تلاش کوچک ارزشمند است. ادامه بده و ثابت‌قدم بمان!"
+    },
     "nav": {
       "dashboard": "داشبورد",
       "dailyTracker": "پیگیری روزانه",
@@ -128,5 +135,125 @@
       "insights": "بینش‌ها",
       "settings": "تنظیمات"
     }
+  },
+  "calendar": {
+    "title": "تقویم رمضان",
+    "subtitle": "سفر کامل خود را در این ماه مبارک دنبال کنید",
+    "ramadan": "رمضان 1447",
+    "day": "روز",
+    "today": "امروز",
+    "dayDetails": "جزئیات روز {day}",
+    "overallCompletion": "درصد کلی تکمیل",
+    "prayersCompleted": "نمازهای انجام شده",
+    "quranPages": "صفحات قرآن",
+    "notes": "یادداشت‌ها",
+    "editTodaysHabit": "ویرایش عادات امروز",
+    "incomplete": "ناتمام"
+  },
+  "insights": {
+    "title": "بینش‌ها و پیشرفت",
+    "subtitle": "سفر معنوی خود را با تحلیل‌های دقیق بهتر درک کنید",
+    "cards": {
+      "currentStreak": "زنجیره فعلی",
+      "currentStreakHint": "همین ثبات عالی را ادامه دهید! 🔥",
+      "longestStreak": "طولانی‌ترین زنجیره",
+      "longestStreakHint": "بهترین رکورد شخصی شما! ماشاءالله! 🌟"
+    },
+    "weekly": {
+      "title": "پیشرفت هفتگی",
+      "completion": "٪ تکمیل"
+    },
+    "prayer": {
+      "title": "پیوستگی نماز"
+    },
+    "prayers": {
+      "fajr": "فجر",
+      "dhuhr": "ظهر",
+      "asr": "عصر",
+      "maghrib": "مغرب",
+      "isha": "عشا"
+    },
+    "quran": {
+      "title": "مطالعه قرآن",
+      "totalPagesRead": "مجموع صفحات خوانده‌شده",
+      "percentOfQuran": "{{percent}}٪ از قرآن",
+      "averagePerDay": "میانگین روزانه",
+      "toCompleteInRamadan": "برای تکمیل در رمضان",
+      "pagesPerDayNeeded": "{{value}} صفحه در روز لازم است",
+      "remainingSummary": "{{pages}} صفحه در {{days}} روز باقی مانده است"
+    },
+    "quickStats": {
+      "title": "آمار سریع",
+      "daysTracked": "روزهای ثبت‌شده",
+      "averageCompletion": "میانگین تکمیل",
+      "fastingDays": "روزهای روزه",
+      "prayerRate": "نرخ نماز"
+    },
+    "labels": {
+      "daysValue": "{{value}} روز",
+      "pagesValue": "{{value}} صفحه"
+    }
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "subtitle": "پروفایل، ترجیحات و حساب خود را مدیریت کنید",
+    "profileInfo": "اطلاعات پروفایل",
+    "saveChanges": "ذخیره تغییرات",
+    "ramadanSettings": "تنظیمات رمضان",
+    "ramadanStartDate": "تاریخ شروع رمضان",
+    "startDateDesc": "این تاریخ شمارش روزها را در ردیاب شما کنترل می‌کند.",
+    "updateDate": "به‌روزرسانی تاریخ",
+    "appearance": "ظاهر",
+    "darkMode": "حالت تاریک",
+    "darkModeEnabled": "حالت تاریک فعال است",
+    "darkModeDisabled": "حالت تاریک غیرفعال است",
+    "language": "زبان",
+    "languageDescription": "زبان دلخواه خود را انتخاب کنید",
+    "dangerZone": "منطقه خطر",
+    "logoutWarning": "پس از خروج، برای دسترسی به داشبورد باید دوباره وارد شوید.",
+    "version": "Ramadan Tracker نسخه {{version}}",
+    "builtWithLove": "با ❤️ برای امت ساخته شده است"
+  },
+  "system": {
+    "offline": {
+      "noInternetConnection": "اتصال اینترنت وجود ندارد"
+    },
+    "error": {
+      "offlineDetected": "به نظر می‌رسد آفلاین هستید.",
+      "somethingWentWrong": "مشکلی پیش آمد.",
+      "tryAgain": "تلاش دوباره"
+    }
+  },
+  "dbMessages": {
+    "When intentions are pure, even simple deeds become powerful.": "وقتی نیت‌ها خالص باشد، حتی اعمال ساده نیز قدرتمند می‌شوند.",
+    "Your effort today may be the reason for mercy tomorrow.": "تلاش امروز شما ممکن است دلیل رحمت فردا باشد.",
+    "Every moment of self-control is recorded as a victory.": "هر لحظه از خودکنترلی به عنوان یک پیروزی ثبت می‌شود.",
+    "Allah sees your effort, even when no one else does.": "الله تلاش شما را می‌بیند، حتی وقتی که هیچ کس دیگر نمی‌بیند.",
+    "Every step you take toward goodness is seen and rewarded by Allah.": "هر قدمی که به سوی خوبی برمی‌دارید، توسط الله دیده می‌شود و پاداش داده می‌شود.",
+    "Each sunrise is a new chance to improve for Allah’s sake.": "هر طلوع خورشید فرصتی جدید برای بهبود برای سوی الله است.",
+    "Keep going—Allah never wastes sincere effort.": "ادامه بده—الله هرگز تلاش صادقانه را هدر نمی‌دهد.",
+    "Small daily actions build a strong connection with Allah.": "اعمال روزانه کوچک، ارتباطی قوی با الله ایجاد می‌کنند.",
+    "Patience during Ramadan brings immense reward.": "صبر در رمضان پاداش عظیمی به همراه دارد.",
+    "Allah rewards those who continue, even when motivation feels low.": "الله کسانی را پاداش می‌دهد که ادامه می‌دهند، حتی زمانی که انگیزه کم به نظر می‌رسد.",
+    "Do not underestimate today’s effort; it may change your akhirah.": "تلاش امروز شما را نادیده نگیرید؛ ممکن است آن تغییری در akhirah شما ایجاد کند.",
+    "A small sincere action done for Allah outweighs many done for show.": "یک عمل کوچک صادقانه که برای الله انجام می‌شود، از بسیاری از اعمالی که برای نمایش انجام می‌شود، سنگین‌تر است.",
+    "Discipline today leads to peace tomorrow.": "انضباط امروز منجر به آرامش فردا می‌شود.",
+    "Allah loves deeds that return to Him again and again.": "الله اعمالی را دوست دارد که بارها و بارها به سوی او بازمی‌گردند.",
+    "Returning to good habits is better than giving up.": "بازگشت به عادات خوب بهتر است از انصراف.",
+    "Allah opens doors for those who keep knocking with patience.": "الله دروازه‌هایی را برای کسانی که با صبر به او می‌خوانند باز می‌کند.",
+    "A believer grows through patience, not perfection.": "یک مؤمن از طریق صبر رشد می‌کند، نه از طریق کمال.",
+    "Steadiness in faith is more beloved than sudden bursts.": "ثبات در ایمان بیشتر علاقه‌مند است از شوک‌های ناگهانی.",
+    "Even missed days can be forgiven with sincere return.": "حتی روزهای از دست رفته می‌توانند با بازگشت صادقانه بخشیده شوند.",
+    "Even on tired days, turning to Allah brings light to the heart.": "حتی در روزهای خسته، رویتن به الله نوری به قلب می‌آورد.",
+    "Your daily commitment is a silent dua answered in time.": "تعهد روزانه شما یک دعاً ساکت است که در وقت پاسخ داده می‌شود.",
+    "Your struggle to stay disciplined is a form of worship.": "جنگ شما برای حفظ انضباط یک شکل از عبادت است.",
+    "A heart that remembers Allah never walks alone.": "قلبی که الله را به خاطر می‌آورد هرگز تنها نمی‌گذرد.",
+    "Allah values persistence over perfection.": "الله پایداری را بر کمال ترجیح می‌دهد.",
+    "Consistency in worship builds a heart that stays close to Allah.": "ثبات در عبادت قلبی می‌سازد که به الله نزدیک می‌ماند.",
+    "Progress may be slow, but sincerity makes it meaningful.": "پیشرفت ممکن است کند باشد، اما صداقت آن را معنادار می‌کند.",
+    "Every act done for Allah brings unseen blessings.": "هر عملی که برای الله انجام شود، بخشندهای نامرئی را به همراه دارد.",
+    "Each day of effort is a brick in your path to Jannah.": "هر روز از تلاش یک آجر در مسیر شما به جannah است.",
+    "Consistency turns intentions into lasting rewards.": "ثبات نیات‌ها را به پاداش‌های دائمی تبدیل می‌کند.",
+    "Allah loves those who strive daily for improvement.": "الله کسانی را دوست دارد که روزانه برای بهبود تلاش می‌کنند."
   }
 }

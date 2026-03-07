@@ -15,18 +15,18 @@ export default function TrackerForm({
   ramadanDay: number | null;
 }) {
   const { t } = useTranslation();
-  const [isFasting, setIsFasting] = useState(tracker.fasted);
-  const [dhikr, setDhikr] = useState(tracker.dhikr);
-  const [notes, setNotes] = useState(tracker.notes ?? "");
-  const [quranPages, setQuranPages] = useState(tracker.quran_pages ?? 0);
+  const [isFasting, setIsFasting] = useState(tracker?.fasted);
+  const [dhikr, setDhikr] = useState(tracker?.dhikr);
+  const [notes, setNotes] = useState(tracker?.notes ?? "");
+  const [quranPages, setQuranPages] = useState(tracker?.quran_pages ?? 0);
   const [isSaving, setIsSaving] = useState(false);
 
   const [prayers, setPrayers] = useState({
-    fajr: tracker.prayed_fajr,
-    dhuhr: tracker.prayed_dhuhr,
-    asr: tracker.prayed_asr,
-    maghrib: tracker.prayed_maghrib,
-    isha: tracker.prayed_isha,
+    fajr: tracker?.prayed_fajr,
+    dhuhr: tracker?.prayed_dhuhr,
+    asr: tracker?.prayed_asr,
+    maghrib: tracker?.prayed_maghrib,
+    isha: tracker?.prayed_isha,
   });
 
   const completedPrayers = Object.values(prayers).filter(Boolean).length;
@@ -77,6 +77,14 @@ export default function TrackerForm({
     },
     { key: "isha", name: t("dailyTracker.prayers.isha"), time: "8:00 PM" },
   ];
+
+  if (!tracker) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-muted-foreground">{t("dailyTracker.noData")}</p>
+      </div>
+    );
+  }
 
   return (
     <>

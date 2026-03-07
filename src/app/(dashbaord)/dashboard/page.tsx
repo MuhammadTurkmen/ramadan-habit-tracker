@@ -1,11 +1,20 @@
+import { Suspense } from "react";
 import { DashboardMotivationQuickAction } from "@/components/dashboard/dashboar-motivation-quick-action";
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
 import { DashboardMiniCalendar } from "@/components/dashboard/dashboard-mini-calendar";
 import { DashboardQuickStarter } from "@/components/dashboard/dashboard-quick-starter";
 import { DashboardTodayCard } from "@/components/dashboard/dashboard-today-card";
+import {
+  DashboardMiniCalendarSkeleton,
+  DashboardMotivationSkeleton,
+  DashboardQuickStarterSkeleton,
+  DashboardTodayCardSkeleton,
+} from "@/components/dashboard-loading";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getLocalDateString, getRamadanDay } from "@/lib/date";
 import { isDayCompleted } from "@/lib/tracker-utils";
+import { getMotivation } from "@/lib/data/motivation";
+import { getTrackers } from "@/lib/data/trackers";
 
 export default async function DashboardPage() {
   const supabase = await createSupabaseServerClient();
@@ -18,20 +27,27 @@ export default async function DashboardPage() {
   const ramadanStart = process.env.RAMADAN_START_DATE!;
   const ramadanDayNumber = getRamadanDay(today, ramadanStart);
 
-  // Today tracker
-  const { data: tracker } = await supabase
-    .from("daily_tracker")
-    .select("*")
-    .eq("user_id", user!.id)
-    .eq("date", today)
-    .maybeSingle();
+  const [trackerResult, trackersResult, motivationResult] = await Promise.all([
+    supabase
+      .from("daily_tracker")
+      .select("*")
+      .eq("user_id", user!.id)
+      .eq("date", today)
+      .maybeSingle(),
 
-  // All trackers for stats and calendar
-  const { data: trackers } = await supabase
-    .from("daily_tracker")
-    .select("*")
-    .eq("user_id", user!.id)
-    .order("date", { ascending: true });
+    // supabase
+    //   .from("daily_tracker")
+    //   .select("*")
+    //   .eq("user_id", user!.id)
+    //   .order("date"),
+
+    getTrackers(user!.id),
+    getMotivation(today),
+  ]);
+
+  const tracker = trackerResult.data;
+  const trackers = trackersResult ?? [];
+  const motivation = motivationResult.data;
 
   const completedDays = trackers?.filter(isDayCompleted).length ?? 0;
 
@@ -84,26 +100,28 @@ export default async function DashboardPage() {
         d.day !== null,
     );
 
-  const { data: motivation } = await supabase
-    .from("daily_motivations")
-    .select("text")
-    .eq("date", today)
-    .maybeSingle();
-
   return (
     <div className="max-w-7xl mx-auto space-y-6">
       <DashboardHeader />
-      <DashboardTodayCard ramadanDay={ramadanDayNumber} tracker={tracker} />
-      <DashboardQuickStarter
-        completedDays={completedDays ?? 0}
-        currentStreak={streak}
-        prayerConsistency={prayerConsistency}
-      />
-      <DashboardMiniCalendar
-        calendarDays={calendarDays}
-        todayRamadanDay={ramadanDayNumber}
-      />
-      <DashboardMotivationQuickAction message={motivation?.text} />
+      <Suspense fallback={<DashboardTodayCardSkeleton />}>
+        <DashboardTodayCard ramadanDay={ramadanDayNumber} tracker={tracker} />
+      </Suspense>
+      <Suspense fallback={<DashboardQuickStarterSkeleton />}>
+        <DashboardQuickStarter
+          completedDays={completedDays ?? 0}
+          currentStreak={streak}
+          prayerConsistency={prayerConsistency}
+        />
+      </Suspense>
+      <Suspense fallback={<DashboardMiniCalendarSkeleton />}>
+        <DashboardMiniCalendar
+          calendarDays={calendarDays}
+          todayRamadanDay={ramadanDayNumber}
+        />
+      </Suspense>
+      <Suspense fallback={<DashboardMotivationSkeleton />}>
+        <DashboardMotivationQuickAction message={motivation?.text} />
+      </Suspense>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Calendar from "@/components/calendar/calendar";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export default async function CalendarPage() {
@@ -7,28 +8,20 @@ export default async function CalendarPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { data } = await supabase
+  const { data: dailyTrackerData } = await supabase
     .from("daily_tracker")
-    .select("date, fasted, quran_pages")
+    .select("*")
     .eq("user_id", user!.id)
     .order("date");
 
-  return (
-    <div>
-      <div className="flex items-center justify-center mb-6">
-        Comming soon...
-      </div>
-    </div>
-  );
+  const { data: ramadanDays } = await supabase.from("ramadan_days").select("*");
 
   return (
-    <div className="space-y-4">
-      {data?.map((day) => (
-        <div key={day.date} className="p-4 border rounded-lg">
-          <div>{day.date}</div>
-          <div>Fasted: {day.fasted ? "✅" : "❌"}</div>
-        </div>
-      ))}
+    <div>
+      <Calendar
+        ramadanDays={ramadanDays || []}
+        trackers={dailyTrackerData || []}
+      />
     </div>
   );
 }

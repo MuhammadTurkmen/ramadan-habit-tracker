@@ -121,6 +121,12 @@
     "settings": "تنظیمات",
     "logout": "وتل",
     "logging_out": "وتل روان دي...",
+    "motivation": {
+      "title": "ورځنۍ هڅونه",
+      "subtitle": "الله دې ستاسو هڅې قبولې کړي 🤲",
+      "quickAction": "د نن ورځې عادتونه تعقیب کړئ",
+      "defaultMessage": "یاد ولرئ، هره کوچنۍ هڅه ارزښت لري. هڅه ته دوام ورکړئ او ثابت پاتې شئ!"
+    },
     "nav": {
       "dashboard": "کنټرول پینل",
       "dailyTracker": "ورځنی تعقیب",
@@ -128,5 +134,125 @@
       "insights": "بصیرتونه",
       "settings": "تنظیمات"
     }
+  },
+  "calendar": {
+    "title": "د روژې کلیز",
+    "subtitle": "خپل بشپړ سفر د دې مبارک میاشتې په جریان کې تعقیب کړئ",
+    "ramadan": "رمضان 1447",
+    "day": "ورځ",
+    "today": "نن",
+    "dayDetails": "د {day} ورځې جزییات",
+    "overallCompletion": "عمومي بشپړتیا",
+    "prayersCompleted": "پوره شوي لمونځونه",
+    "quranPages": "د قرآن صفحې",
+    "notes": "یادداشتونه",
+    "editTodaysHabit": "د نن ورځې عادتونه سمول",
+    "incomplete": "نیمګړی"
+  },
+  "insights": {
+    "title": "بصیرتونه او پرمختګ",
+    "subtitle": "خپل روحاني سفر د تفصیلي تحلیل له لارې درک کړئ",
+    "cards": {
+      "currentStreak": "اوسنی تسلسل",
+      "currentStreakHint": "دا عالي دوام همداسې وساتئ! 🔥",
+      "longestStreak": "تر ټولو اوږد تسلسل",
+      "longestStreakHint": "ستاسو شخصي غوره لاسته راوړنه! ماشاءالله! 🌟"
+    },
+    "weekly": {
+      "title": "اونیز پرمختګ",
+      "completion": "د بشپړېدو سلنه"
+    },
+    "prayer": {
+      "title": "د لمونځ دوام"
+    },
+    "prayers": {
+      "fajr": "فجر",
+      "dhuhr": "ظهر",
+      "asr": "عصر",
+      "maghrib": "مغرب",
+      "isha": "عشاء"
+    },
+    "quran": {
+      "title": "د قرآن تلاوت",
+      "totalPagesRead": "ټولې لوستل شوې پاڼې",
+      "percentOfQuran": "د قرآن {{percent}}%",
+      "averagePerDay": "د ورځې اوسط",
+      "toCompleteInRamadan": "په رمضان کې د بشپړولو لپاره",
+      "pagesPerDayNeeded": "هره ورځ {{value}} پاڼې اړینې دي",
+      "remainingSummary": "{{pages}} پاڼې په {{days}} ورځو کې پاتې دي"
+    },
+    "quickStats": {
+      "title": "چټک احصایې",
+      "daysTracked": "تعقیب شوې ورځې",
+      "averageCompletion": "اوسط بشپړتیا",
+      "fastingDays": "د روژې ورځې",
+      "prayerRate": "د لمونځ کچه"
+    },
+    "labels": {
+      "daysValue": "{{value}} ورځې",
+      "pagesValue": "{{value}} پاڼې"
+    }
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "subtitle": "خپل پروفایل، خوښې او حساب مدیریت کړئ",
+    "profileInfo": "د پروفایل معلومات",
+    "saveChanges": "بدلونونه خوندي کړئ",
+    "ramadanSettings": "د رمضان تنظیمات",
+    "ramadanStartDate": "د رمضان د پیل نېټه",
+    "startDateDesc": "دا نېټه ستاسو په ټریکر کې د ورځو شمېر کنټرولوي.",
+    "updateDate": "نېټه تازه کړئ",
+    "appearance": "بڼه",
+    "darkMode": "تیاره حالت",
+    "darkModeEnabled": "تیاره حالت فعال دی",
+    "darkModeDisabled": "تیاره حالت غیرفعال دی",
+    "language": "ژبه",
+    "languageDescription": "خپله خوښه ژبه وټاکئ",
+    "dangerZone": "د خطر برخه",
+    "logoutWarning": "کله چې وتل وکړئ، بیا به ډشبورډ ته د لاسرسي لپاره ننوتل اړین وي.",
+    "version": "Ramadan Tracker v{{version}}",
+    "builtWithLove": "د امت لپاره په ❤️ سره جوړ شوی"
+  },
+  "system": {
+    "offline": {
+      "noInternetConnection": "د انټرنېټ اړیکه نشته"
+    },
+    "error": {
+      "offlineDetected": "تاسو آفلاین ښکاري.",
+      "somethingWentWrong": "یو څه ناسم شول.",
+      "tryAgain": "بیا هڅه وکړئ"
+    }
+  },
+  "dbMessages": {
+    "When intentions are pure, even simple deeds become powerful.": "کله چې نیت پاک دي، حتی ساده عملونه هم قوي جوړ کوي.",
+    "Your effort today may be the reason for mercy tomorrow.": "ستاسو تلاش امروز ممکن د غفران غده ځل وي.",
+    "Every moment of self-control is recorded as a victory.": "هر لحظه د خپل کنترول په ټاکلو کې یو فتح ثبت کیږي.",
+    "Allah sees your effort, even when no one else does.": "الله ستاسو تلاش وینی، حتی کله چې هیڅ یو نه ویني.",
+    "Every step you take toward goodness is seen and rewarded by Allah.": "هر پرمختل کوم چې تاسو ته خیرت لخوا واخلي، د الله لخوا ویني او پاداش می‌دهي.",
+    "Each sunrise is a new chance to improve for Allah’s sake.": "هر سور له نوی فرصت د اصلاح لخوا د الله لخوا واخلي.",
+    "Keep going—Allah never wastes sincere effort.": "مخکې لاړ شئ—الله هیڅکله خالص تلاش ضایع نه کوي.",
+    "Small daily actions build a strong connection with Allah.": "کوچني روزانه عملونه د الله سره قوي اړیکه جوړوي.",
+    "Patience during Ramadan brings immense reward.": "د رمضان په جریان کې صبر کول لوی اجر راوړي.",
+    "Allah rewards those who continue, even when motivation feels low.": "الله دانوی چې دوام کوي، حتی کله چې انگیزه په پایل کې حس کړي.",
+    "Do not underestimate today’s effort; it may change your akhirah.": "د امروز تلاش نه پاته کړئ؛ ممکن د ستاسو اخیره بدل کړي.",
+    "A small sincere action done for Allah outweighs many done for show.": "د الله لخوا جوړ شوی کوچني خالص عمل د نور ډولونو لخوا ډیر ځینه وي.",
+    "Discipline today leads to peace tomorrow.": "نن نظم کول د سبا سکون راوړي.",
+    "Allah loves deeds that return to Him again and again.": "الله عملونه ورکوي چې د هغه بیرته راتلونکي دي.",
+    "Returning to good habits is better than giving up.": "د ښه عادتونو ته بیرته راتلل د تسلیمیدو څخه بهتره دی.",
+    "Allah opens doors for those who keep knocking with patience.": "الله دروازې پر کړي دانوی چې د صبر سره د ننوتلو کوي.",
+    "A believer grows through patience, not perfection.": "یو باورمن چې د صبر سره وده کوي، نه د تکمیل سره.",
+    "Steadiness in faith is more beloved than sudden bursts.": "د باورمنی په ټاکلو کې ثبات د ناگه ځلولو څخه بهتره دی.",
+    "Even missed days can be forgiven with sincere return.": "حتی د ناکارو روزونه ممکن د خالص بیرته راتلونکي سره معاف وي.",
+    "Even on tired days, turning to Allah brings light to the heart.": "حتی د خسته روزونه کې، د الله ته بیرته راتلو به د قلب لپاره نورې ورکوي.",
+    "Your daily commitment is a silent dua answered in time.": "د امروز د پاکی سره ځای پر کړي دانوی چې د صبر سره د ننوتلو کوي.",
+    "Your struggle to stay disciplined is a form of worship.": "ستاسو مبارزه د نظم ساتلو لپاره د عبادت یوه بڼه ده.",
+    "A heart that remembers Allah never walks alone.": "د الله یاد کولو قلب هرگوماره تنه چلوي.",
+    "Allah values persistence over perfection.": "الله د پیروی په ځای کې د تکمیل ورکوي.",
+    "Consistency in worship builds a heart that stays close to Allah.": "د عبادت په ټاکلو کې ثبات د قلب جوړوي چې د الله سره نزدي می‌مانوي.",
+    "Progress may be slow, but sincerity makes it meaningful.": "پیشرفت ممکن لente وي، مګر خالصت به دا معنی‌دار کوي.",
+    "Every act done for Allah brings unseen blessings.": "هر عمل چې د الله لخوا جوړ شوی به ناپیدلی بركت ورکوي.",
+    "Each day of effort is a brick in your path to Jannah.": "هر روز چې د تلاش سره جوړ شوی به د جنه سر کې یو چوکاټ دی.",
+    "Consistency turns intentions into lasting rewards.": "ثبات نیتونه د پایلی اجر ته بدلوي.",
+    "Allah loves those who strive daily for improvement.": "الله دانوی چې د روزانه د اصلاح لخوا تلاش کوي."
   }
 }

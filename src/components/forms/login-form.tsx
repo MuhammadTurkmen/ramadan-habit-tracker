@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLeft, Lock, Mail, Moon } from "lucide-react";
+import { ArrowLeft, ArrowRight, Lock, Mail, Moon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -7,8 +7,11 @@ import { motion } from "framer-motion";
 import { loginAction } from "@/app/actions/authentication";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/lib/language-context";
 
 export default function LoginForm() {
+  const { isRTL } = useLanguage();
+
   const { t } = useTranslation();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -51,7 +54,11 @@ export default function LoginForm() {
       >
         <Link href={"/"}>
           <button className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
+            {isRTL ? (
+              <ArrowRight className="w-4 h-4" />
+            ) : (
+              <ArrowLeft className="w-4 h-4" />
+            )}{" "}
             {t("auth.back_to_home", "Back to Home")}
           </button>
         </Link>

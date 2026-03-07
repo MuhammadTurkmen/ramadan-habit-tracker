@@ -2,12 +2,23 @@
 import { CalendarIcon, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export function DashboardMotivationQuickAction({
   message,
 }: {
-  message?: string;
+  message?: string | null;
 }) {
+  const { t } = useTranslation();
+
+  const translatedMessage = (() => {
+    if (!message) return t("dashboard.motivation.defaultMessage");
+    const dbMessages = t("dbMessages", {
+      returnObjects: true,
+    }) as Record<string, string>;
+    return dbMessages?.[message] ?? message;
+  })();
+
   return (
     <>
       {/* Section 4 - Motivation */}
@@ -22,14 +33,10 @@ export function DashboardMotivationQuickAction({
             <Sparkles className="w-6 h-6 text-accent" />
           </div>
           <div className="flex-1">
-            <h3 className="text-lg mb-2">Daily Motivation</h3>
-            <p className="text-muted-foreground mb-4">
-              May Allah accept your efforts 🤲
-            </p>
+            <h3 className="text-lg mb-2">{t("dashboard.motivation.title")}</h3>
+            <p className="text-muted-foreground mb-4">{t("dashboard.motivation.subtitle")}</p>
             <div className="bg-card/50 rounded-lg p-4 italic border border-accent/20">
-              {message
-                ? message
-                : "Remember, every small effort counts. Keep striving and stay consistent!"}
+              {translatedMessage}
             </div>
           </div>
         </div>
@@ -44,7 +51,7 @@ export function DashboardMotivationQuickAction({
         <Link href="/dashboard/daily-tracker">
           <button className="w-full bg-primary text-primary-foreground py-4 rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
             <CalendarIcon className="w-5 h-5" />
-            Track Today's Habits
+            {t("dashboard.motivation.quickAction")}
           </button>
         </Link>
       </motion.div>

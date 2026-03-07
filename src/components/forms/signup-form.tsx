@@ -1,16 +1,16 @@
 "use client";
-
-import { supabase } from "@/lib/supabase/client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Lock, Mail, Moon, User } from "lucide-react";
+import { ArrowLeft, ArrowRight, Lock, Mail, Moon, User } from "lucide-react";
 import { motion } from "framer-motion";
 import { signupAction } from "@/app/actions/authentication";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/lib/language-context";
 
 export default function SignUpForm() {
   const { t } = useTranslation();
+  const { isRTL } = useLanguage();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<{
@@ -54,7 +54,11 @@ export default function SignUpForm() {
       >
         <Link href={"/"}>
           <button className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
+            {isRTL ? (
+              <ArrowRight className="w-4 h-4" />
+            ) : (
+              <ArrowLeft className="w-4 h-4" />
+            )}
             {t("auth.back_to_home", "Back to Home")}
           </button>
         </Link>

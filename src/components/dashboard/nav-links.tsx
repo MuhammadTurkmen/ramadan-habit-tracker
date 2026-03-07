@@ -25,6 +25,7 @@ export default function NavLinks({ onClick }: { onClick?: () => void }) {
                 ? "bg-primary text-primary-foreground shadow-lg"
                 : "text-muted-foreground hover:bg-secondary hover:text-foreground"
             }`}
+            prefetch
           >
             <item.icon className="w-5 h-5" />
             {t(item.title)}

@@ -88,7 +88,8 @@
       "asr": "Asr",
       "maghrib": "Maghrib",
       "isha": "Isha"
-    }
+    },
+    "noData": "No data for today yet. Today's tracker will come soon! Please wait patiently 🌙"
   },
   "dashboard": {
     "greeting": "Assalamu Alaikum! 👋",
@@ -121,6 +122,12 @@
     "settings": "Settings",
     "logout": "Logout",
     "logging_out": "Logging out...",
+    "motivation": {
+      "title": "Daily Motivation",
+      "subtitle": "May Allah accept your efforts 🤲",
+      "quickAction": "Track Today's Habits",
+      "defaultMessage": "Remember, every small effort counts. Keep striving and stay consistent!"
+    },
     "nav": {
       "dashboard": "Dashboard",
       "dailyTracker": "Daily Tracker",
@@ -128,5 +135,125 @@
       "insights": "Insights",
       "settings": "Settings"
     }
+  },
+  "calendar": {
+    "title": "Ramadan Calendar",
+    "subtitle": "Track your complete journey through the blessed month",
+    "ramadan": "Ramadan 1447",
+    "day": "Day",
+    "today": "Today",
+    "dayDetails": "Day {day} Details",
+    "overallCompletion": "Overall Completion",
+    "prayersCompleted": "Prayers Completed",
+    "quranPages": "Quran Pages",
+    "notes": "Notes",
+    "editTodaysHabit": "Edit Today's Habits",
+    "incomplete": "Incomplete"
+  },
+  "insights": {
+    "title": "Insights & Progress",
+    "subtitle": "Understand your spiritual journey with detailed analytics",
+    "cards": {
+      "currentStreak": "Current Streak",
+      "currentStreakHint": "Keep up the amazing consistency! 🔥",
+      "longestStreak": "Longest Streak",
+      "longestStreakHint": "Your personal best! Mashallah! 🌟"
+    },
+    "weekly": {
+      "title": "Weekly Progress",
+      "completion": "Completion %"
+    },
+    "prayer": {
+      "title": "Prayer Consistency"
+    },
+    "prayers": {
+      "fajr": "Fajr",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "quran": {
+      "title": "Quran Reading",
+      "totalPagesRead": "Total Pages Read",
+      "percentOfQuran": "{{percent}}% of the Quran",
+      "averagePerDay": "Average per day",
+      "toCompleteInRamadan": "To complete in Ramadan",
+      "pagesPerDayNeeded": "{{value}} pages/day needed",
+      "remainingSummary": "{{pages}} pages left in {{days}} days"
+    },
+    "quickStats": {
+      "title": "Quick Stats",
+      "daysTracked": "Days Tracked",
+      "averageCompletion": "Average Completion",
+      "fastingDays": "Fasting Days",
+      "prayerRate": "Prayer Rate"
+    },
+    "labels": {
+      "daysValue": "{{value}} days",
+      "pagesValue": "{{value}} pages"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your profile, preferences, and account",
+    "profileInfo": "Profile Information",
+    "saveChanges": "Save Changes",
+    "ramadanSettings": "Ramadan Settings",
+    "ramadanStartDate": "Ramadan Start Date",
+    "startDateDesc": "This date controls the day count across your tracker.",
+    "updateDate": "Update Date",
+    "appearance": "Appearance",
+    "darkMode": "Dark Mode",
+    "darkModeEnabled": "Dark mode is enabled",
+    "darkModeDisabled": "Dark mode is disabled",
+    "language": "Language",
+    "languageDescription": "Choose your preferred language",
+    "dangerZone": "Danger Zone",
+    "logoutWarning": "Once you logout, you'll need to sign in again to access your dashboard.",
+    "version": "Ramadan Tracker v{{version}}",
+    "builtWithLove": "Built with ❤️ for the Ummah"
+  },
+  "system": {
+    "offline": {
+      "noInternetConnection": "No internet connection"
+    },
+    "error": {
+      "offlineDetected": "You appear to be offline.",
+      "somethingWentWrong": "Something went wrong.",
+      "tryAgain": "Try again"
+    }
+  },
+  "dbMessages": {
+    "When intentions are pure, even simple deeds become powerful.": "When intentions are pure, even simple deeds become powerful.",
+    "Your effort today may be the reason for mercy tomorrow.": "Your effort today may be the reason for mercy tomorrow.",
+    "Every moment of self-control is recorded as a victory.": "Every moment of self-control is recorded as a victory.",
+    "Allah sees your effort, even when no one else does.": "Allah sees your effort, even when no one else does.",
+    "Every step you take toward goodness is seen and rewarded by Allah.": "Every step you take toward goodness is seen and rewarded by Allah.",
+    "Each sunrise is a new chance to improve for Allah’s sake.": "Each sunrise is a new chance to improve for Allah’s sake.",
+    "Keep going—Allah never wastes sincere effort.": "Keep going—Allah never wastes sincere effort.",
+    "Small daily actions build a strong connection with Allah.": "Small daily actions build a strong connection with Allah.",
+    "Patience during Ramadan brings immense reward.": "Patience during Ramadan brings immense reward.",
+    "Allah rewards those who continue, even when motivation feels low.": "Allah rewards those who continue, even when motivation feels low.",
+    "Do not underestimate today’s effort; it may change your akhirah.": "Do not underestimate today’s effort; it may change your akhirah.",
+    "A small sincere action done for Allah outweighs many done for show.": "A small sincere action done for Allah outweighs many done for show.",
+    "Discipline today leads to peace tomorrow.": "Discipline today leads to peace tomorrow.",
+    "Allah loves deeds that return to Him again and again.": "Allah loves deeds that return to Him again and again.",
+    "Returning to good habits is better than giving up.": "Returning to good habits is better than giving up.",
+    "Allah opens doors for those who keep knocking with patience.": "Allah opens doors for those who keep knocking with patience.",
+    "A believer grows through patience, not perfection.": "A believer grows through patience, not perfection.",
+    "Steadiness in faith is more beloved than sudden bursts.": "Steadiness in faith is more beloved than sudden bursts.",
+    "Even missed days can be forgiven with sincere return.": "Even missed days can be forgiven with sincere return.",
+    "Even on tired days, turning to Allah brings light to the heart.": "Even on tired days, turning to Allah brings light to the heart.",
+    "Your daily commitment is a silent dua answered in time.": "Your daily commitment is a silent dua answered in time.",
+    "Your struggle to stay disciplined is a form of worship.": "Your struggle to stay disciplined is a form of worship.",
+    "A heart that remembers Allah never walks alone.": "A heart that remembers Allah never walks alone.",
+    "Allah values persistence over perfection.": "Allah values persistence over perfection.",
+    "Consistency in worship builds a heart that stays close to Allah.": "Consistency in worship builds a heart that stays close to Allah.",
+    "Progress may be slow, but sincerity makes it meaningful.": "Progress may be slow, but sincerity makes it meaningful.",
+    "Every act done for Allah brings unseen blessings.": "Every act done for Allah brings unseen blessings.",
+    "Each day of effort is a brick in your path to Jannah.": "Each day of effort is a brick in your path to Jannah.",
+    "Consistency turns intentions into lasting rewards.": "Consistency turns intentions into lasting rewards.",
+    "Allah loves those who strive daily for improvement.": "Allah loves those who strive daily for improvement."
   }
 }

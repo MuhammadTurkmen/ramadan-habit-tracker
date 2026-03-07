@@ -121,6 +121,12 @@
     "settings": "Ayarlar",
     "logout": "Çıkış Yap",
     "logging_out": "Çıkış yapılıyor...",
+    "motivation": {
+      "title": "Günlük Motivasyon",
+      "subtitle": "Allah emeklerinizi kabul etsin 🤲",
+      "quickAction": "Bugünün Alışkanlıklarını Takip Et",
+      "defaultMessage": "Unutma, her küçük çaba değerlidir. Gayret etmeye devam et ve istikrarlı kal!"
+    },
     "nav": {
       "dashboard": "Kontrol Paneli",
       "dailyTracker": "Günlük Takip",
@@ -128,5 +134,125 @@
       "insights": "İçgörüler",
       "settings": "Ayarlar"
     }
+  },
+  "calendar": {
+    "title": "Ramazan Takvimi",
+    "subtitle": "Kutsal ay boyunca tüm yolculuğunuzu takip edin",
+    "ramadan": "Ramazan 1447",
+    "day": "Gün",
+    "today": "Bugün",
+    "dayDetails": "Gün {day} Detayları",
+    "overallCompletion": "Genel Tamamlama",
+    "prayersCompleted": "Tamamlanan Namazlar",
+    "quranPages": "Quran Sayfaları",
+    "notes": "Notlar",
+    "editTodaysHabit": "Bugünün Alışkanlıklarını Düzenle",
+    "incomplete": "Tamamlanmadı"
+  },
+  "insights": {
+    "title": "İçgörüler ve İlerleme",
+    "subtitle": "Manevi yolculuğunuzu detaylı analizlerle anlayın",
+    "cards": {
+      "currentStreak": "Mevcut Seri",
+      "currentStreakHint": "Harika tutarlılığı korumaya devam edin! 🔥",
+      "longestStreak": "En Uzun Seri",
+      "longestStreakHint": "Kişisel en iyiniz! Maşallah! 🌟"
+    },
+    "weekly": {
+      "title": "Haftalık İlerleme",
+      "completion": "Tamamlama %"
+    },
+    "prayer": {
+      "title": "Namaz Tutarlılığı"
+    },
+    "prayers": {
+      "fajr": "Fajr",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "quran": {
+      "title": "Kur'an Okuma",
+      "totalPagesRead": "Toplam Okunan Sayfa",
+      "percentOfQuran": "Kur'an'ın %{{percent}}'i",
+      "averagePerDay": "Günlük ortalama",
+      "toCompleteInRamadan": "Ramazan'da tamamlamak için",
+      "pagesPerDayNeeded": "Günde {{value}} sayfa gerekli",
+      "remainingSummary": "{{days}} günde {{pages}} sayfa kaldı"
+    },
+    "quickStats": {
+      "title": "Hızlı İstatistikler",
+      "daysTracked": "Takip Edilen Gün",
+      "averageCompletion": "Ortalama Tamamlama",
+      "fastingDays": "Oruç Günleri",
+      "prayerRate": "Namaz Oranı"
+    },
+    "labels": {
+      "daysValue": "{{value}} gün",
+      "pagesValue": "{{value}} sayfa"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "subtitle": "Profilinizi, tercihlerinizi ve hesabınızı yönetin",
+    "profileInfo": "Profil Bilgileri",
+    "saveChanges": "Değişiklikleri Kaydet",
+    "ramadanSettings": "Ramazan Ayarları",
+    "ramadanStartDate": "Ramazan Başlangıç Tarihi",
+    "startDateDesc": "Bu tarih, takip uygulamanızdaki gün sayısını kontrol eder.",
+    "updateDate": "Tarihi Güncelle",
+    "appearance": "Görünüm",
+    "darkMode": "Karanlık Mod",
+    "darkModeEnabled": "Karanlık mod açık",
+    "darkModeDisabled": "Karanlık mod kapalı",
+    "language": "Dil",
+    "languageDescription": "Tercih ettiğiniz dili seçin",
+    "dangerZone": "Tehlikeli Bölge",
+    "logoutWarning": "Çıkış yaptığınızda, panele erişmek için yeniden giriş yapmanız gerekir.",
+    "version": "Ramadan Tracker v{{version}}",
+    "builtWithLove": "Ümmet için ❤️ ile yapıldı"
+  },
+  "system": {
+    "offline": {
+      "noInternetConnection": "İnternet bağlantısı yok"
+    },
+    "error": {
+      "offlineDetected": "Çevrimdışı görünüyorsunuz.",
+      "somethingWentWrong": "Bir şeyler ters gitti.",
+      "tryAgain": "Tekrar dene"
+    }
+  },
+  "dbMessages": {
+    "When intentions are pure, even simple deeds become powerful.": "Niyetler saf olduğunda, basit eylemler bile güçlü hale gelir.",
+    "Your effort today may be the reason for mercy tomorrow.": "Bugünkü çabanız, yarının merhametine neden olabilir.",
+    "Every moment of self-control is recorded as a victory.": "Her bir öz kontrol anı, bir zafer olarak kaydedilir.",
+    "Allah sees your effort, even when no one else does.": "Allah senin çabanı görür, başka kimse göremeyebilir.",
+    "Every step you take toward goodness is seen and rewarded by Allah.": "İyiliğe doğru attığın her adımı Allah görür ve ödüllendirir.",
+    "Each sunrise is a new chance to improve for Allah’s sake.": "Her gün doğumunda, Allah için gelişmek için yeni bir fırsat vardır.",
+    "Keep going—Allah never wastes sincere effort.": "Devam et—Allah dürüst çabayı asla boşa harcarmaz.",
+    "Small daily actions build a strong connection with Allah.": "Küçük günlük eylemler, Allah ile güçlü bir bağ kurar.",
+    "Patience during Ramadan brings immense reward.": "Ramazan sırasında sabır, muhteşem bir ödül getirir.",
+    "Allah rewards those who continue, even when motivation feels low.": "Allah, motiveasyon düşüktürken bile devam edenlere ödüller verir.",
+    "Do not underestimate today’s effort; it may change your akhirah.": "Bugünkü çabayı altından kalkmayın; bu sizin akhirah'ınızı değiştirebilir.",
+    "A small sincere action done for Allah outweighs many done for show.": "Allah için yapılan küçük dürüst eylemler, gösteriş için yapılan birçok eylemden daha değerlidir.",
+    "Discipline today leads to peace tomorrow.": "Bugünkü disiplin, yarının barışına yol açar.",
+    "Allah loves deeds that return to Him again and again.": "Allah, Ona tekrar dönen eylemleri sever.",
+    "Returning to good habits is better than giving up.": "İyi alışkanlıklara dönme, vazgeçmekten daha iyidir.",
+    "Allah opens doors for those who keep knocking with patience.": "Allah, sabır ile kapalı olan kapıları açar.",
+    "A believer grows through patience, not perfection.": "Bir inanan, mükemmellik değil, sabır ile büyür.",
+    "Steadiness in faith is more beloved than sudden bursts.": "İnançta sabitlik, ani patlamalardan daha çok sevilir.",
+    "Even missed days can be forgiven with sincere return.": "Eksik günler bile dürüst bir dönüşle bağışlanabilir.",
+    "Even on tired days, turning to Allah brings light to the heart.": "Yorgun günlerde bile Allah’a yönelmek kalbe ışık getirir.",
+    "Your daily commitment is a silent dua answered in time.": "Bugünkü taahhüdün, zamanında cevaplanan sessiz bir dua.",
+    "Your struggle to stay disciplined is a form of worship.": "Disiplinli kalma çabandır, ibadetin bir biçimidir.",
+    "A heart that remembers Allah never walks alone.": "Allah’ı hatırlayan bir kalp asla yalnız yürümez.",
+    "Allah values persistence over perfection.": "Allah, mükemmellikten ziyade direnci değerendir.",
+    "Consistency in worship builds a heart that stays close to Allah.": "İbadette tutarlılık, Allah’a yakın kalan bir kalp inşa eder.",
+    "Progress may be slow, but sincerity makes it meaningful.": "İlerleme yavaş olabilir, ama dürüstlük onu anlamlı hale getirir.",
+    "Every act done for Allah brings unseen blessings.": "Allah için yapılan her eylem, görülmemiş nimetler getirir.",
+    "Each day of effort is a brick in your path to Jannah.": "Her gün çaba, Jannah’a giden yolda bir tuğla.",
+    "Consistency turns intentions into lasting rewards.": "Tutarlılık, niyetleri kalıcı ödüllere dönüştürür.",
+    "Allah loves those who strive daily for improvement.": "Allah, her gün gelişim için çabanın içinde olanları sever."
   }
 }
