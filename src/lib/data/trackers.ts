@@ -1,7 +1,6 @@
-import { cache } from "react";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-export const getTrackers = cache(async (userId: string) => {
+export const getTrackers = async (userId: string) => {
   const supabase = await createSupabaseServerClient();
 
   const { data } = await supabase
@@ -11,4 +10,4 @@ export const getTrackers = cache(async (userId: string) => {
     .order("date");
 
   return data ?? [];
-});
+};
