@@ -14,19 +14,19 @@ export default async function DailyTrackerPage() {
   const ramadanStart = process.env.RAMADAN_START_DATE!;
   const ramadanDay = getRamadanDay(today, ramadanStart);
 
-  // const { data: existingTracker } = await supabase
-  //   .from("daily_tracker")
-  //   .select("*")
-  //   .eq("user_id", user!.id)
-  //   .eq("date", today)
-  //   .maybeSingle();
+  const { data: existingTracker } = await supabase
+    .from("daily_tracker")
+    .select("*")
+    .eq("user_id", user!.id)
+    .eq("date", today)
+    .maybeSingle();
 
-  const trackers = await getTrackers(user!.id);
-  const tracker = trackers?.find((t) => t.date === today);
+  // const trackers = await getTrackers(user!.id);
+  // const tracker = trackers?.find((t) => t.date === today);
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <TrackerForm tracker={tracker} ramadanDay={ramadanDay} />
+      <TrackerForm tracker={existingTracker} ramadanDay={ramadanDay} />
     </div>
   );
 }
