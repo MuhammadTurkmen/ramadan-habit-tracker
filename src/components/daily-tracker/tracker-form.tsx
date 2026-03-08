@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import { useRouter } from "next/navigation";
 
 export default function TrackerForm({
   tracker,
@@ -20,6 +21,8 @@ export default function TrackerForm({
   const [notes, setNotes] = useState(tracker?.notes ?? "");
   const [quranPages, setQuranPages] = useState(tracker?.quran_pages ?? 0);
   const [isSaving, setIsSaving] = useState(false);
+
+  const router = useRouter();
 
   const [prayers, setPrayers] = useState({
     fajr: tracker?.prayed_fajr,
@@ -54,6 +57,7 @@ export default function TrackerForm({
       if (error) {
         throw error;
       }
+      router.refresh();
       toast.success(t("dailyTracker.progressSaved"));
     } catch (error) {
       toast.error(t("dailyTracker.saveError"));

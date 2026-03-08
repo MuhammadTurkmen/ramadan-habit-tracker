@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import {
   User,
   Mail,
-  Calendar,
   Moon,
   Sun,
   LogOut,
@@ -15,6 +14,10 @@ import { useLanguage } from "@/lib/language-context";
 import { useTranslation } from "react-i18next";
 import { logout } from "@/app/actions/authentication";
 import { useTheme } from "next-themes";
+import ChangePasswordCard from "./change-password-card";
+import { supabase } from "@/lib/supabase/client";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const languages = [
   { code: "en", name: "English", flag: "🇬🇧" },
@@ -31,11 +34,33 @@ export default function Settings({ user }: SettingsProps) {
   const { theme, setTheme } = useTheme();
   const { t } = useTranslation();
   const { language, setLanguage } = useLanguage();
+  const { isRTL } = useLanguage();
+  const startIconClass = isRTL ? "right-3" : "left-3";
 
   const [name, setName] = useState(user?.user_metadata?.full_name ?? "");
   const [email] = useState(user?.email ?? "");
-  const [ramadanStartDate, setRamadanStartDate] = useState("2026-02-28");
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  const handleUpdateProfile = async () => {
+    if (!name) {
+      toast.error(t("settings.nameRequired"));
+      return;
+    }
+    try {
+      setLoading(true);
+      const { error } = await supabase.auth.updateUser({
+        data: { full_name: name },
+      });
+      if (error) throw error;
+      router.refresh();
+      toast.success(t("settings.profileUpdated"));
+    } catch (error) {
+      toast.error(t("settings.profileUpdateFailed"));
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -56,47 +81,59 @@ export default function Settings({ user }: SettingsProps) {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="bg-card rounded-2xl p-6 border border-border shadow-lg"
       >
-        <div className="flex items-center gap-2 mb-6">
-          <User className="w-6 h-6 text-primary" />
-          <h2 className="text-2xl">{t("settings.profileInfo")}</h2>
-        </div>
-
-        <div className="space-y-4">
-          <div>
-            <label className="block mb-2 text-muted-foreground">
-              {t("auth.name")}
-            </label>
-            <div className="relative">
-              <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-input-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
+        <form action="">
+          <div className="flex items-center gap-2 mb-6">
+            <User className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl">{t("settings.profileInfo")}</h2>
           </div>
 
-          <div>
-            <label className="block mb-2 text-muted-foreground">
-              {t("auth.email")}
-            </label>
-            <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <input
-                type="email"
-                value={email}
-                disabled
-                className="w-full pl-10 pr-4 py-3 bg-input-background border border-input rounded-lg opacity-70 cursor-not-allowed"
-              />
+          <div className="space-y-4">
+            <div>
+              <label className="block mb-2 text-muted-foreground">
+                {t("auth.name")}
+              </label>
+              <div className="relative">
+                <User
+                  className={`absolute ${startIconClass} top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground`}
+                />
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full p-10 pr-10 py-3 bg-input-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
             </div>
-          </div>
 
-          <button className="w-full md:w-auto px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all shadow-lg">
-            {t("settings.saveChanges")}
-          </button>
-        </div>
+            <div>
+              <label className="block mb-2 text-muted-foreground">
+                {t("auth.email")}
+              </label>
+              <div className="relative">
+                <Mail
+                  className={`absolute ${startIconClass} top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground`}
+                />
+                <input
+                  type="email"
+                  value={email}
+                  disabled
+                  className="w-full px-10 pr-10 py-3 bg-input-background border border-input rounded-lg opacity-70 cursor-not-allowed"
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              onClick={handleUpdateProfile}
+              className="w-full md:w-auto px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all shadow-lg"
+            >
+              {loading ? t("settings.saving") : t("settings.saveChanges")}
+            </button>
+          </div>
+        </form>
       </motion.div>
+      <ChangePasswordCard />
 
       {/* Card 2 - Ramadan Settings */}
       {/* <motion.div

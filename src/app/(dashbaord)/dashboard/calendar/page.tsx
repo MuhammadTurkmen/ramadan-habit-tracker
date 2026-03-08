@@ -1,4 +1,5 @@
 import Calendar from "@/components/calendar/calendar";
+import { getTrackers } from "@/lib/data/trackers";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export default async function CalendarPage() {
@@ -8,11 +9,13 @@ export default async function CalendarPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { data: dailyTrackerData } = await supabase
-    .from("daily_tracker")
-    .select("*")
-    .eq("user_id", user!.id)
-    .order("date");
+  // const { data: dailyTrackerData } = await supabase
+  //   .from("daily_tracker")
+  //   .select("*")
+  //   .eq("user_id", user!.id)
+  //   .order("date");
+
+  const dailyTrackerData = await getTrackers(user!.id);
 
   const { data: ramadanDays } = await supabase.from("ramadan_days").select("*");
 
