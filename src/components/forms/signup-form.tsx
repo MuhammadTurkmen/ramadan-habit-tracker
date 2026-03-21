@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { signupAction } from "@/app/actions/authentication";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/lib/language-context";
+import { supabase } from "@/lib/supabase/client";
 
 export default function SignUpForm() {
   const { t } = useTranslation();
@@ -42,6 +43,17 @@ export default function SignUpForm() {
     }
 
     setLoading(false);
+  }
+
+  async function handleGoogleAuth() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+
+    if (error) console.log(error);
   }
 
   return (
@@ -143,10 +155,10 @@ export default function SignUpForm() {
               </div>
             </div>
 
-            {/* <button
+            <button
               type="button"
-              onClick={handleGoogleSignUp}
-              className="w-full py-3 bg-white border-2 border-border rounded-lg hover:bg-secondary transition-all flex items-center justify-center gap-2 text-card-foreground"
+              onClick={handleGoogleAuth}
+              className="w-full py-3 border-2 border-border rounded-lg hover:bg-secondary transition-all flex items-center justify-center gap-2 text-card-foreground"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path
@@ -167,7 +179,7 @@ export default function SignUpForm() {
                 />
               </svg>
               Sign up with Google
-            </button> */}
+            </button>
           </form>
 
           <p className="mt-6 text-center text-muted-foreground">

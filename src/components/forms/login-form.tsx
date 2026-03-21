@@ -8,6 +8,7 @@ import { loginAction } from "@/app/actions/authentication";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/lib/language-context";
+import { supabase } from "@/lib/supabase/client";
 
 export default function LoginForm() {
   const { isRTL } = useLanguage();
@@ -42,6 +43,17 @@ export default function LoginForm() {
     if (result.field) {
       setErrors({ [result.field]: result.message });
     }
+  }
+
+  async function handleGoogleLogin() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+
+    if (error) console.log(error);
   }
 
   return (
@@ -85,23 +97,29 @@ export default function LoginForm() {
                 />
               </div>
             </div>
-
             <div>
-              <label className="block mb-2 text-card-foreground">
-                {t("auth.password")}
-              </label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <input
-                  type="password"
-                  name="password"
-                  className="w-full pl-10 pr-4 py-3 bg-input-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                  placeholder="••••••••"
-                  required
-                />
+              <div>
+                <label className="block mb-2 text-card-foreground">
+                  {t("auth.password")}
+                </label>
+                <div className="relative">
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <input
+                    type="password"
+                    name="password"
+                    className="w-full mb-3 pl-10 pr-4 py-3 bg-input-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    placeholder="••••••••"
+                    required
+                  />
+                </div>
               </div>
-            </div>
 
+              <Link href="/forgot-password" className="inline-block">
+                <span className="text-sm text-primary hover:underline">
+                  Forgot password?
+                </span>
+              </Link>
+            </div>
             {errors.general && (
               <p className="text-red-500 text-sm mt-1">{errors.general}</p>
             )}
@@ -125,10 +143,10 @@ export default function LoginForm() {
               </div>
             </div>
 
-            {/* <button
+            <button
               type="button"
               onClick={handleGoogleLogin}
-              className="w-full py-3 bg-white border-2 border-border rounded-lg hover:bg-secondary transition-all flex items-center justify-center gap-2 text-card-foreground"
+              className="w-full py-3  border-2 border-border rounded-lg hover:bg-secondary transition-all flex items-center justify-center gap-2 text-card-foreground"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path
@@ -149,7 +167,7 @@ export default function LoginForm() {
                 />
               </svg>
               Login with Google
-            </button> */}
+            </button>
           </form>
 
           <p className="mt-6 text-center text-muted-foreground">
